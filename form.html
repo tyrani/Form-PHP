@@ -1,0 +1,42 @@
+<html>
+<head>
+<script type ="text/javascript">
+	function CekDataSiswa(){
+		var nis = document.getElementById("nis");
+		if(nis.value == ""){
+			alert("NIS masih kosong");
+			return false;
+		}
+		var nama = document.getElementById("nama");
+		if(nama.value == ""){
+			alert("nama masih kosong");
+			return false;
+		}
+		var umur = document.getElementById("umur");
+		var usia_temp = parseInt(umur.value);
+		if(isNaN(usia_temp)){
+			alert("umur salah");
+			return false;
+		}
+		return true;
+	}
+</script>
+<body>
+<form method ="POST" onsubmit="return CekDataSiswa">
+NIS : <input type ="text" id="nis"><br>
+NAMA : <input type ="text" id="nama"><br>
+KOTA : <select id="kota">
+<option value="10">pilih kota</option>
+<option value="11">surabaya</option>
+<option value="12">malang</option>
+<option value="13">kediri</option>
+<option value="14">batu</option>
+<option value="15">jakarta</option>
+</select><br>
+umur<input type="text" id="umur">Tahun<br>
+<input type="reset" value ="reset">
+<input type="submit" value ="submit">
+</form>
+</body>
+</head>
+</html>
